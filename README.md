@@ -1,4 +1,24 @@
-# Data Dictionary for IS4487 Datasets
+# Intro to Business Analytics Course Datasets
+This table includes curated datasets for an introductory business analytics course. Each entry includes the dataset’s year, a short description, suitability criteria (showing the number of variables, target variable if applicable, and types of data quality issues), and the GitHub link or dataset source.
+
+| Dataset Name | Year | Description | Business Application | # Variables | Target Variable | Data Quality Issues | Special Features | GitHub Link | Relevant Majors/Minors |
+|:-------------|:-----|:------------|:----------------------|:------------|:----------------|:--------------------|:------------------|:------------|:------------------------|
+| **Hotels** | 2020 | Hotel bookings including cancellations, stay duration, guest demographics. | Hospitality analytics, revenue mgmt. | 32 | `is_canceled` | Missing values, outliers, categorical encoding | Rich categorical + numeric mix | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-02-11/readme.md) | Business Administration, Operations & Supply Chain, Information Systems |
+| **Student Loan Payments** | 2019 | Loan performance by institution and borrower demographics. | Higher ed finance, student aid policy | 20+ | `repayment_rate` | Missing data, skewed distributions, standardization needed | Good regression/classification use | [GitHub](https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-11-26) | Finance, QAMO |
+| **Super Bowl Commercials** | 2021 | Ad data by brand and viewer impact across 20+ years. | Marketing, media performance | ~15 | `funny` or `likeability` (proxy) | Categorical encoding, missing features | API access + text features | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2021/2021-03-02/readme.md) | Marketing, Business Analytics (minor) |
+| **GPT Detectors** | 2023 | AI-generated text classifications with detector outputs. | AI fairness, model evaluation | ~10 | `label` (AI vs Human) | Class imbalance, text preprocessing | Probabilistic & categorical features | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-07-18/readme.md) | Information Systems, Business Analytics (minor) |
+| **School Diversity** | 2019 | Racial diversity metrics across schools and districts. | Public policy, education equity | ~12 | None explicitly | Merging districts, categorical encoding | Geographic + merging tasks | [GitHub](https://github.com/rfordatascience/tidytuesday/tree/main/data/2019/2019-09-24) | Management, QAMO |
+| **Big Tech Stock Prices** | 2023 | Daily stock data for major tech companies. | Financial markets, tech sector analysis | ~7 (per company) | `close` | Missing trading days, volatility outliers | Time series friendly | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-02-07/readme.md) | Finance, FinTech (minor), QAMO |
+| **Economic Diversity and Student Outcomes** | 2024 | Outcomes vs. income demographics in higher education. | Socioeconomic mobility studies | ~15 | `median_earnings` | Requires merging/joining, NA values | Institutional join, multiple sources | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-03-10/readme.md) | Finance, Business Administration, QAMO |
+| **Wealth and Income Over Time** | 2021 | Longitudinal trends in earnings, wealth by race/income. | Economic inequality analysis | ~20 | `wealth_gap` (engineered) | Gaps over time, missing race data | Strong for time series cleaning | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2021/2021-02-09/readme.md) | QAMO, Finance |
+| **SF Rents** | 2022 | Rental prices in San Francisco over time. | Urban economics, housing markets | ~10–12 | `rent` | Price outliers, missing records, standardization | Outliers, geospatial prep needed | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2022/2022-07-05/readme.md) | Real Estate, Business Analytics (minor) |
+| **Monthly State Retail Sales** | 2022 | Monthly retail sales across U.S. states. | Retail trends, geographic comparisons | ~15 | `sales` | Seasonal gaps, NA values, numeric scaling | Ideal for seasonal modeling | [GitHub](https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-12-13) | Marketing, Operations & Supply Chain, Business Analytics (minor) |
+| **Global Holidays and Travel** | 2024 | Human mobility patterns based on holiday calendars. | Tourism analysis, mobility planning | ~12 | None (engineer mobility flag) | Missing geolocations, holiday anomalies | Geospatial + temporal complexity | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2024/2024-12-24/readme.md) | Operations & Supply Chain, Marketing |
+| **Megatelco Customer Survey** | 2023 | Demographic, usage, and churn survey data from a telecom firm. | Churn analysis, customer segmentation | ~15 | `Leave` | Categorical harmonization, inconsistent NA entries | Survey + behavioral + financial fields | *Local* | Information Systems, Business Analytics |
+| **Amazon Reviews** | 2022 | User review sentiment data scraped from Amazon product pages. | NLP, product analytics | 4 | `sentiment` | Sparse text length, class imbalance | Free-text with target label | *Local* | Marketing, Business Analytics |
+| **AdviseInvest Historical** | 2023 | Past customers’ profiles and outcomes for an investment firm. | Investment decision behavior, churn | ~10 | `Leave` | Some missing entries | Binary classification | *Local* | Finance, QAMO |
+| **AdviseInvest New Customers** | 2023 | Unlabeled new investor data for prediction. | Profile scoring, churn modeling | ~9 | Unknown | Missing satisfaction, no outcomes | Supervised learning setup | *Local* | Finance, Business Analytics |
+| **Superstore Retail Orders** | 2017 | Order and sales data across regions and products. | Retail operations, profit analysis | ~18 | `Profit` or `Sales` | Date parsing, inconsistent regions | Joinable categories & dates | *Local* | Business Analytics, Marketing |
 
 ---
 
@@ -517,4 +537,179 @@
 | Total_OS      | double    | Total air passengers (thousands) from open source data |
 
 ---
+
+---
+
+## Megatelco New Customer Data  
+**Description:** Demographic and usage profile data on new customers acquired by Megatelco. Useful for churn prediction and customer segmentation modeling.
+
+### Data Dictionary
+
+#### `megatelco_new_customer_data.csv`
+
+| Variable         | Class     | Description |
+|:----------------|:----------|:------------|
+| ID              | integer   | Unique customer ID |
+| College         | integer   | 1 if attended some college, 0 otherwise |
+| Income          | double    | Annual income of the customer |
+| House           | double    | Estimated house price (if available) |
+| DataOverage     | double    | Average MBs used over the plan limit |
+| DataLeftover    | double    | Average MBs unused under the plan limit |
+| DataUsed        | double    | Average MBs used per month |
+| Texts           | double    | Average number of monthly text messages |
+| Over15MinCalls  | double    | Average number of long-duration calls/month |
+| CallDuration    | double    | Average call duration in minutes |
+| OS              | character | Operating system of customer's phone |
+| HandsetPrice    | double    | Retail price of the handset |
+| Satisfaction    | character | Satisfaction level (high, med, low) |
+| UsageLevel      | character | Reported usage level (high, med, low) |
+| ChangePlan      | character | Intent to change provider (high, med, low) |
+
+---
+
+## Megatelco Leave Survey  
+**Description:** Survey responses from customers who recently churned or renewed service. Contains satisfaction, usage, and demographic indicators for churn analysis.
+
+### Data Dictionary
+
+#### `megatelco_leave_survey.csv`
+
+| Variable         | Class     | Description |
+|:----------------|:----------|:------------|
+| ID              | integer   | Customer identifier |
+| College         | integer   | Has the customer attended some college (1=yes) |
+| Income          | double    | Annual income of customer |
+| House           | double    | Estimated home price |
+| DataOverage     | double    | Average MBs over limit |
+| DataLeftover    | double    | Average MBs unused |
+| DataUsed        | double    | Monthly average MBs used |
+| Texts           | double    | Text messages per month |
+| Over15MinCalls  | double    | Calls over 15 mins/month |
+| CallDuration    | double    | Average call length |
+| OS              | character | Operating system |
+| HandsetPrice    | double    | Price of phone |
+| Satisfaction    | character | Reported satisfaction |
+| UsageLevel      | character | Reported usage level |
+| ChangePlan      | character | Considering provider switch |
+| Leave           | character | Whether customer left or stayed |
+
+---
+
+## Amazon Reviews  
+**Description:** User reviews of Amazon products, likely including rating scores, sentiment, and review text useful for NLP or classification models.
+
+### Data Dictionary
+
+#### `amazon-reviews2.csv`
+
+| Variable     | Class     | Description |
+|:-------------|:----------|:------------|
+| rating       | double    | Star rating (1 to 5) |
+| title        | character | Title of the review |
+| body         | character | Full review text |
+| sentiment    | character | Derived sentiment label |
+
+---
+
+## AdviseInvest Historical Customer Data  
+**Description:** Performance data and features on past customers of AdviseInvest, including demographic and behavior variables used for investment profile modeling.
+
+### Data Dictionary
+
+#### `adviseinvest_historical_data.csv`
+
+| Variable         | Class     | Description |
+|:----------------|:----------|:------------|
+| ID              | integer   | Unique customer ID |
+| Age             | double    | Age of customer |
+| MaritalStatus   | character | Marital status |
+| IncomeLevel     | character | Categorical income level |
+| Education       | character | Highest education completed |
+| RiskTolerance   | character | Risk tolerance profile |
+| InvestmentPref  | character | Preferred investment style |
+| AdvisorVisits   | double    | Number of advisor interactions |
+| PortfolioSize   | double    | Size of current portfolio (USD) |
+| Leave           | character | Whether customer stayed or left |
+
+---
+
+## AdviseInvest New Customer Data  
+**Description:** Latest incoming client profiles for prediction of future churn or segmentation into risk/investment categories.
+
+### Data Dictionary
+
+#### `adviseinvest_new_customer_data.csv`
+
+| Variable         | Class     | Description |
+|:----------------|:----------|:------------|
+| ID              | integer   | Customer ID |
+| Age             | double    | Age |
+| MaritalStatus   | character | Marital status |
+| IncomeLevel     | character | Income group |
+| Education       | character | Education level |
+| RiskTolerance   | character | Risk profile |
+| InvestmentPref  | character | Preferred strategy |
+| AdvisorVisits   | double    | Visits to financial advisor |
+| PortfolioSize   | double    | Portfolio value |
+
+---
+
+## Superstore Retail Orders  
+**Description:** A dataset of product orders from a fictional retail superstore. Includes customer segments, order dates, shipping details, sales, and profits.
+
+### Data Dictionary
+
+#### `superstore_retail_orders.csv`
+
+| Variable           | Class     | Description |
+|:-------------------|:----------|:------------|
+| Order ID           | character | Unique order identifier |
+| Customer ID        | character | Unique customer identifier |
+| Segment            | character | Customer segment |
+| Country            | character | Country of order |
+| City               | character | City of delivery |
+| State              | character | State of delivery |
+| Postal Code        | character | ZIP code |
+| Region             | character | Sales region |
+| Product ID         | character | ID of the product |
+| Category           | character | Product category |
+| Sub-Category       | character | Product sub-category |
+| Product Name       | character | Product description |
+| Sales              | double    | Total sales value |
+| Quantity           | double    | Quantity sold |
+| Discount           | double    | Discount applied |
+| Profit             | double    | Profit from sale |
+| Order Date         | date      | Date of order |
+| Ship Date          | date      | Shipment date |
+| Ship Mode          | character | Delivery speed |
+
+---
+
+## Super Bowl Commercials  
+**Description:** Metadata and features of Super Bowl advertisements, covering branding tactics, presence of celebrities, humor, and YouTube engagement metrics.
+
+### Data Dictionary
+
+#### `x_superbowl.csv`
+
+| Variable        | Class     | Description |
+|:----------------|:----------|:------------|
+| year            | double    | Year of Super Bowl |
+| brand           | character | Advertiser |
+| funny           | logical   | Contains humor |
+| show_product_quickly | logical | Shows product early |
+| patriotic       | logical   | Patriotic content |
+| celebrity       | logical   | Features celebrity |
+| danger          | logical   | Dangerous situations |
+| animals         | logical   | Uses animals |
+| use_sex         | logical   | Uses sexuality |
+| view_count      | integer   | Number of views |
+| like_count      | integer   | Number of likes |
+| dislike_count   | integer   | Number of dislikes |
+| favorite_count  | integer   | Number of favorites |
+| comment_count   | integer   | Number of comments |
+| published_at    | character | Publish date on YouTube |
+
+---
+
 
