@@ -57,6 +57,8 @@ Each lab and assignment is paired with a curated dataset appropriate for the wee
 
 #### `hotel_bookings.csv`
 
+hotels = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-02-11/hotels.csv')
+
 | Variable                     | Class     | Description |
 |:-----------------------------|:----------|:------------|
 | hotel                        | character | Hotel type (Resort or City) |
