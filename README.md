@@ -129,6 +129,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `youtube.csv`
 
+youtube = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-03-02/youtube.csv')
+
 | Variable                  | Class     | Description |
 |:-------------------------|:----------|:------------|
 | year                     | double    | Super Bowl year |
@@ -168,6 +170,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `detectors.csv`
 
+detectors = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-07-18/detectors.csv')
+
 | Variable    | Class     | Description |
 |:------------|:----------|:------------|
 | kind        | character | Human vs AI authored text |
@@ -191,6 +195,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 ### Data Dictionary
 
 #### `school_diversity.csv`
+
+school_diversity = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-09-24/school_diversity.csv")
 
 | Variable     | Class     | Description |
 |:-------------|:----------|:------------|
@@ -221,6 +227,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `big_tech_stock_prices.csv`
 
+big_tech_stock_prices = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-02-07/big_tech_stock_prices.csv')
+
 | Variable     | Class     | Description |
 |:-------------|:----------|:------------|
 | stock_symbol | character | Ticker symbol |
@@ -233,6 +241,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | volume       | double    | Shares traded |
 
 #### `big_tech_companies.csv`
+
+big_tech_companies = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2023/2023-02-07/big_tech_companies.csv')
 
 | Variable     | Class     | Description |
 |:-------------|:----------|:------------|
@@ -250,6 +260,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `tuition_cost.csv`
 
+tuition_cost = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-03-10/tuition_cost.csv')
+
 | Variable             | Class     | Description |
 |:---------------------|:----------|:------------|
 | name                 | character | Institution name |
@@ -265,6 +277,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `tuition_income.csv`
 
+tuition_income = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-03-10/tuition_income.csv')
+
 | Variable    | Class     | Description |
 |:------------|:----------|:------------|
 | name        | character | School name |
@@ -276,6 +290,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | income_lvl  | character | Income level bracket |
 
 #### `salary_potential.csv`
+
+salary_potential = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-03-10/salary_potential.csv')
 
 | Variable                  | Class     | Description |
 |:--------------------------|:----------|:------------|
@@ -289,6 +305,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `historical_tuition.csv`
 
+historical_tuition = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-03-10/historical_tuition.csv')
+
 | Variable     | Class     | Description |
 |:-------------|:----------|:------------|
 | type         | character | School type |
@@ -297,6 +315,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | tuition_cost | double    | Tuition amount |
 
 #### `diversity_school.csv`
+
+diversity_school = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2020/2020-03-10/diversity_school.csv')
 
 | Variable         | Class     | Description |
 |:------------------|:----------|:------------|
@@ -317,6 +337,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `lifetime_earn.csv`
 
+lifetime_earn = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/
+
 | Variable      | Class     | Description |
 |:--------------|:----------|:------------|
 | gender        | character | Gender group |
@@ -324,6 +346,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | lifetime_earn | double    | Average lifetime earnings |
 
 #### `student_debt.csv`
+
+student_debt = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/student_debt.csv')
 
 | Variable      | Class     | Description |
 |:--------------|:----------|:------------|
@@ -334,6 +358,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `retirement.csv`
 
+retirement = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/retirement.csv')
+
 | Variable   | Class     | Description |
 |:-----------|:----------|:------------|
 | year       | double    | Year |
@@ -342,6 +368,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `home_owner.csv`
 
+home_owner = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/home_owner.csv')
+
 | Variable       | Class     | Description |
 |:---------------|:----------|:------------|
 | year           | double    | Year |
@@ -349,6 +377,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | home_owner_pct | double    | % homeowners |
 
 #### `race_wealth.csv`
+
+race_wealth = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/race_wealth.csv')
 
 | Variable      | Class     | Description |
 |:--------------|:----------|:------------|
@@ -359,6 +389,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `income_time.csv`
 
+income_time = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_time.csv')
+
 | Variable      | Class     | Description |
 |:--------------|:----------|:------------|
 | year          | integer   | Year |
@@ -366,6 +398,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | income_family | double    | Income value |
 
 #### `income_limits.csv`
+
+income_limits = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_limits.csv')
 
 | Variable        | Class     | Description |
 |:----------------|:----------|:------------|
@@ -378,6 +412,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `income_aggregate.csv`
 
+income_aggregate = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_aggregate.csv')
+
 | Variable        | Class     | Description |
 |:----------------|:----------|:------------|
 | year            | double    | Year |
@@ -387,6 +423,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | income_share    | double    | % of total income |
 
 #### `income_distribution.csv`
+
+income_distribution = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_distribution.csv')
 
 | Variable            | Class     | Description |
 |:--------------------|:----------|:------------|
@@ -401,6 +439,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | income_distribution | double    | % in bracket |
 
 #### `income_mean.csv`
+
+income_mean = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_mean.csv')
 
 | Variable        | Class     | Description |
 |:----------------|:----------|:------------|
@@ -420,6 +460,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 ### Data Dictionary
 
 #### `rent.csv`
+
+rent = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-07-05/rent.csv')
 
 | Variable     | Class     | Description |
 |:-------------|:----------|:------------|
@@ -442,6 +484,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | details      | character | Additional listing details |
 
 #### `sf_permits.csv`
+
+permits = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-07-05/sf_permits.csv')
 
 | Variable                               | Class     | Description |
 |:--------------------------------------|:----------|:------------|
@@ -492,6 +536,8 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `new_construction.csv`
 
+new_construction = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-07-05/new_construction.csv')
+
 | Variable             | Class     | Description |
 |:---------------------|:----------|:------------|
 | cartodb_id           | integer   | Unique ID |
@@ -516,6 +562,21 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `state_retail.csv`
 
+state_retail = pd.read_csv(
+    'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-12-13/state_retail.csv',
+    dtype={
+        'fips': 'string',
+        'state_abbr': 'string',
+        'naics': 'int32',
+        'subsector': 'string',
+        'year': 'int32',
+        'month': 'int32',
+        'change_yoy': 'string',
+        'change_yoy_se': 'string',
+        'coverage_code': 'string'
+    }
+)
+
 | Variable      | Class     | Description |
 |:--------------|:----------|:------------|
 | fips          | character | 2-digit State Federal Information Processing Standards (FIPS) code. [Reference](https://www.census.gov/library/reference/code-lists/ansi/ansi-codes-for-states.html) |
@@ -529,6 +590,14 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | coverage_code | character | Code reflecting level of coverage and imputation |
 
 #### `coverage_codes.csv`
+
+coverage_codes = pd.read_csv(
+    'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-12-13/coverage_codes.csv',
+    dtype={
+        'coverage_code': 'string',
+        'coverage': 'string'
+    }
+)
 
 | Variable      | Class     | Description |
 |:--------------|:----------|:------------|
@@ -546,6 +615,11 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `global_holidays.csv`
 
+global_holidays = pd.read_csv(
+    'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-12-24/global_holidays.csv',
+    parse_dates=['Date']
+)
+
 | Variable | Class     | Description |
 |:----------|:----------|:-------------|
 | ADM_name | character | Name of the administering location (country or political subdivision) |
@@ -556,6 +630,10 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 
 #### `monthly_passengers.csv`
 
+monthly_passengers = pd.read_csv(
+    'https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2024/2024-12-24/monthly_passengers.csv'
+)
+
 | Variable      | Class     | Description |
 |:---------------|:----------|:-------------|
 | ISO3          | character | 3-letter ISO code (see [ISO Codes - 2024-11-12](https://tidytues.day/2024/2024-11-12)) |
@@ -565,8 +643,6 @@ loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesd
 | Domestic      | double    | Domestic air passengers (thousands) from official statistics |
 | International | double    | International air passengers (thousands) from official statistics |
 | Total_OS      | double    | Total air passengers (thousands) from open source data |
-
----
 
 ---
 
