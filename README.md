@@ -103,6 +103,8 @@ hotels = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytues
 
 #### `loans.csv`
 
+loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-11-26/loans.csv")
+
 | Variable           | Class     | Description |
 |:------------------|:----------|:------------|
 | agency_name        | character | Name of loan agency |
