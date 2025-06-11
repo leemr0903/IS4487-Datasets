@@ -23,8 +23,6 @@ This table includes curated datasets for an introductory business analytics cour
 
 ---
 
-# Possible Outline
-
 # Weekly Dataset Assignment Plan
 
 Each lab and assignment is paired with a curated dataset appropriate for the week’s learning goals. Lab and assignment datasets must differ. Easier datasets are generally used for assignments.
@@ -46,7 +44,9 @@ Each lab and assignment is paired with a curated dataset appropriate for the wee
 | 13   | Modeling & Eval V (Text)     | [GPT Detectors](#gpt-detectors)                                                                     | NLP + classification, model calibration                       | [Super Bowl Commercials](#super-bowl-commercials)                                                 | Feature flags as predictors for ad success                      |
 | 14   | Model Deployment             | [Global Holidays and Travel](#global-holidays-and-travel)                                           | Real-world holiday/travel demand use case                     | [AdviseInvest New Customer Data](#adviseinvest-new-customer-data)                                | Try deploying basic customer score pipeline                     |
 | 15   | Final Project + Exam         | Student Choice                                                                                       | Final project time                                            | —                                                                                                    | Project/report wrap-up                                          |
+---
 
+# Dataset Descriptions and Links
 
 ## Hotels  
 <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-02-11/readme.md" target="_blank">GitHub Source</a>
