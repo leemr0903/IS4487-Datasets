@@ -1,25 +1,72 @@
 # Intro to Business Analytics Weekly Dataset Assignment Plan
 
-Each lab and assignment is paired with a curated dataset appropriate for the week’s learning goals. Lab and assignment datasets must differ. Easier datasets are generally used for assignments.
-
 | Week | Topic                             | Lab Dataset                                  | Why for Lab                                                | Assignment Dataset                          | Why for Assignment                                              |
 |------|-----------------------------------|----------------------------------------------|------------------------------------------------------------|----------------------------------------------|------------------------------------------------------------------|
-| 1    | Overview of Analytics             | —                                            | Intro week, foundational tools                           | [Hotels](#hotels)                            | Large, structured, clean for first modeling                    |
-| 2    | Analytical Model Types            | [Super Bowl Commercials](#super-bowl-commercials) | Small, categorical + text flags for classification      | [SF Rents](#sf-rents)                        | Numeric target, many records for regression                    |
-| 3    | Business Understanding            | [Big Tech Stock Prices](#big-tech-stock-prices) | Time-series, financial KPIs                             | [Student Loan Payments](#student-loan-payments) | Socioeconomic context, repayment target                        |
-| 4    | Data Exploration & Visualization  | [Wealth & Income Over Time](#wealth-and-income-over-time) | Trend & inequality visualization                   | [School Diversity](#school-diversity)        | % diversity measures, clustering ready                         |
-| 5    | Data Preparation                  | [Monthly State Retail Sales](#monthly-state-retail-sales) | Focus on NAs, seasonality, scaling                    | [Economic Diversity & Student Outcomes](#economic-diversity-and-student-outcomes) | Multi-source merge, regression prep                           |
-| 6    | Encoding & Feature Engineering    | [Global Holidays & Travel](#global-holidays-and-travel) | Time/geospatial flags, holiday creation               | [Student Loan Payments](#student-loan-payments) (reused) | One-hot, binning, new features                                |
-| 7    | Data Transformation & Scaling     | [SF Rents](#sf-rents) (reused in labs)        | Skewed prices, outlier handling, scaling              | [Hotels](#hotels) (reused)                   | Standardizing, dummy variables                                |
-| 8    | Exam Week                         | —                                            | —                                                        | —                                            | —                                                                |
-| 9    | Clustering & Segmentation         | [School Diversity](#school-diversity) (reused in labs) | Segment districts by diversity                      | [Superstore Retail Orders](#superstore-retail-orders) | Cluster based on sales/discount/profit                       |
-| 10   | Classification Modeling           | [Megatelco Customer Survey](#megatelco-customer-survey) | Churn flag classification with mixed features      | [Hotels](#hotels) (reused)                   | Build decision tree or KNN on cancellation flag              |
-| 11   | Regression Modeling               | [Big Tech Stock Prices](#big-tech-stock-prices) (reused in labs) | Predict price using historical data                | [Student Loan Payments](#student-loan-payments) (reused) | Predict repayment rate using economic features               |
-| 12   | Model Tuning (Advanced Models)    | [Amazon Reviews](#amazon-reviews)            | Sentiment text classification + model tuning       | [Economic Diversity & Student Outcomes](#economic-diversity-and-student-outcomes) (reused) | Tune regression/tree models                                 |
-| 13   | Text Analytics & Evaluation       | [GPT Detectors](#gpt-detectors)              | Text classification with ROC/confusion matrix       | [Student Loan Payments](#student-loan-payments) (reused) | Evaluate model flags or derived notes                       |
-| 14   | Deployment & MLOps Concepts       | [Global Holidays & Travel](#global-holidays-and-travel) (reused) | Build API-style forecasting on holiday demand  | [SF Rents](#sf-rents) (reused)               | Deploy rent prediction microservice                          |
-| 15   | Final Project & Wrap-Up           | Student Choice                               | Consolidation and end-of-course project              | —                                            | —                                                                |
+| 1    | Overview of Analytics             | —                                            | Intro week, foundational tools                             | Case Studies                                 | Applied case study analysis to introduce business context       |
+| 2    | Analytical Model Types            | [Super Bowl Commercials](#super-bowl-commercials)            | Small, categorical + text flags for classification         | [SF Rents](#sf-rents)                                     | Numeric target, many records for regression                    |
+| 3    | Business Understanding            | [Big Tech Stock Prices](#big-tech-stock-prices)              | Time-series, financial KPIs                                | [Student Loan Payments](#student-loan-payments)                        | Socioeconomic context, repayment target                         |
+| 4    | Data Exploration & Visualization  | [Wealth & Income Over Time](#wealth--income-over-time)       | Trend & inequality visualization                           | [School Diversity](#school-diversity)                             | % diversity measures, clustering ready                          |
+| 5    | Data Preparation                  | [Monthly State Retail Sales](#monthly-state-retail-sales)    | Focus on NAs, seasonality, scaling                         | [Economic Diversity & Student Outcomes](#economic-diversity-and-student-outcomes)        | Multi-source merge, regression prep                            |
+| 6    | Encoding & Feature Engineering    | [Global Holidays & Travel](#global-holidays-and-travel)         | Time/geospatial flags, holiday creation                    | TBD                                          | TBD                                                            |
+| 7    | Data Transformation & Scaling     | [SF Rents](#sf-rents)                                        | Skewed prices, outlier handling, scaling                   | TBD                                          | TBD                                                            |
+| 8    | Exam Week                         | —                                            | —                                                          | —                                            | —                                                              |
+| 9    | Clustering & Segmentation         | [School Diversity](#school-diversity)                         | Segment districts by diversity                             | [Superstore Retail Orders](#superstore-retail-orders)                     | Cluster based on sales/discount/profit                         |
+| 10   | Classification Modeling           | [Megatelco Customer Survey](#megatelco-customer-survey)      | Churn flag classification with mixed features              | [Hotels](#hotels)                                       | Build decision tree or KNN on cancellation flag                |
+| 11   | Regression Modeling               | [Big Tech Stock Prices](#big-tech-stock-prices)              | Predict price using historical data                        | [Student Loan Payments](#student-loan-payments)                        | Predict repayment rate using economic features                 |
+| 12   | Model Tuning (Advanced Models)    | [Amazon Reviews](#amazon-reviews)                            | Sentiment text classification + model tuning               | [Economic Diversity & Student Outcomes](#economic-diversity-and-student-outcomes)        | Tune regression/tree models                                     |
+| 13   | Text Analytics & Evaluation       | [GPT Detectors](#gpt-detectors)                              | Text classification with ROC/confusion matrix              | [Student Loan Payments](#student-loan-payments)                        | Evaluate model flags or derived notes                          |
+| 14   | Deployment & MLOps Concepts       | [Global Holidays & Travel](#global-holidays-and-travel)         | Build API-style forecasting on holiday demand              | [SF Rents](#sf-rents)                                     | Deploy rent prediction microservice                            |
+| 15   | Final Project & Wrap-Up           | Student Choice                                | Consolidation and end-of-course project                    | —                                            | —                                                              |
 ---
+
+## 📝 Week 1 Case Studies
+
+### 📱 Streaming Churn – *Flicksly’s Battle for Binge-Watchers*
+
+**Case Study:**  
+Flicksly is a fast-growing streaming service aimed at Gen Z and young professionals. They offer original content, live sports, and curated playlists — but the competition is fierce (hi, Netflix, Hulu, Disney+). Over the past year, Flicksly noticed that a wave of users were canceling right after their free trials ended, or binge-watching a single show and ghosting.
+
+To fix this, Flicksly’s analytics team built a churn prediction model using data like how many shows users watch, time of day they watch, whether they rate or review anything, and their device types. The goal? Score every subscriber and predict who’s likely to leave. Then they send offers or recommendations (like “Finish that series?” or “1 more month on us!”) to try to keep them around.
+
+Since launching this model, Flicksly increased retention by 22% among trial users and discovered that night-time bingeing is linked to loyalty.
+
+**Q&A:**
+- **What’s the business problem?**  
+  Flicksly is losing subscribers fast and wants to predict who’s likely to cancel, so they can improve retention and stop revenue losses.
+
+- **Supervised or unsupervised?**  
+  Supervised. They have past data showing which users stayed or canceled, so they train the model on that.
+
+- **What’s the target variable?**  
+  Whether the user canceled or stayed — a binary variable (churned = 1, stayed = 0).
+
+- **What kind of analytics?**  
+  Classification — predicting which category a new user will fall into (churn or not).
+
+---
+
+### 👟 Returns & Refunds – *StreetStyle’s Smart Shopping Filters*
+
+**Case Study:**  
+StreetStyle is a popular online retailer for sneakers and streetwear. Their Gen Z customers love flash drops and limited releases — but not every order sticks. Return rates for certain products are high, especially for shoes that don’t fit well or have unclear sizing. This is hurting StreetStyle’s profits and messing with their inventory planning.
+
+To solve this, StreetStyle launched a returns prediction model. It uses data like product type, size ordered, past return history, customer reviews, cart behavior (do they add 3 sizes then keep 1?), and even delivery speed. If an order looks risky, StreetStyle can show a sizing tip, recommend better-fit items, or offer store credit instead of a refund.
+
+As a result, they reduced returns by 15% and boosted customer satisfaction by helping people get it right the first time.
+
+**Q&A:**
+- **What’s the business problem?**  
+  StreetStyle wants to cut down on product returns that cost money and hurt customer trust.
+
+- **Supervised or unsupervised?**  
+  Supervised. They’ve tracked which orders were returned and use that to train the model.
+
+- **What’s the target variable?**  
+  Whether an order is returned or kept (binary: return = 1, keep = 0).
+
+- **What kind of analytics?**  
+  Classification — they’re predicting if an item will be returned.
+
 ---
 
 # Dataset Outlines
