@@ -137,7 +137,7 @@ youtube = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytue
 ---
 
 ## GPT Detectors  
-<a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-04-18/readme.md" target="_blank">GitHub Source</a>
+<a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2023/2023-07-18/readme.md" target="_blank">GitHub Source</a>
 
 **Description:** Data from AI text detectors assessing whether essays are human- or AI-generated. Enables discussions on AI ethics, model calibration, and NLP model performance.
 
