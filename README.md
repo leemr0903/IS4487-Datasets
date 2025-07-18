@@ -575,31 +575,11 @@ monthly_passengers = pd.read_csv(
 
 ---
 
-## Super Bowl Commercials  
-**Description:** Metadata and features of Super Bowl advertisements, covering branding tactics, presence of celebrities, humor, and YouTube engagement metrics.
 
 ### Data Dictionary
 
 #### `x_superbowl.csv`
 
-| Variable        | Class     | Description |
-|:----------------|:----------|:------------|
-| year            | double    | Year of Super Bowl |
-| brand           | character | Advertiser |
-| funny           | logical   | Contains humor |
-| show_product_quickly | logical | Shows product early |
-| patriotic       | logical   | Patriotic content |
-| celebrity       | logical   | Features celebrity |
-| danger          | logical   | Dangerous situations |
-| animals         | logical   | Uses animals |
-| use_sex         | logical   | Uses sexuality |
-| view_count      | integer   | Number of views |
-| like_count      | integer   | Number of likes |
-| dislike_count   | integer   | Number of dislikes |
-| favorite_count  | integer   | Number of favorites |
-| comment_count   | integer   | Number of comments |
-| published_at    | character | Publish date on YouTube |
 
----
 
 
