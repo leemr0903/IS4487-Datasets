@@ -1,72 +1,22 @@
 # Intro to Business Analytics Module Dataset Assignment Plan
 
-| Module | Topic                         | Lab Dataset                        | Why for Lab                                             | Assignment Dataset                                          | Why for Assignment                                             |
-|--------|-------------------------------|------------------------------------|----------------------------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------|
-| 1      | Overview of Business Analytics | —                                  | Intro week, foundational tools                          | Case Study                                                   | —                                                              |
-| 2      | Intro to Analytical Models     | —                                  | Basic syntax and data operations                         | Case Study                                                   | —                                                              |
-| 3      | Business Understanding         | —                                  | Business case                                            | Case Study                                                   | —                                                              |
-| 4      | Data Understanding             | [SF Rents](#sf-rents)              | Familiar categories, pricing, dates                      | [School Diversity](#school-diversity)                        | % diversity measures, clustering ready                         |
-| 5      | EDA – Summary Measures         | [SF Rents](#sf-rents)              | Mixed numeric and categorical, explore rent trends       | [Hotels](#hotels)                                            | Structured records to explore summaries & distributions        |
-| 6      | Data Preparation               | [Megatelco](#megatelco)            | NAs, duplicates, categories to bin or encode             | —                                                            | —                                                              |
-| 7      | Data Transformation            | [Megatelco](#megatelco)            | Label encoding, scaling, feature engineering             | [Global Holidays & Travel](#global-holidays-and-travel)      | Time/geospatial flags, holiday creation                        |
-| 8      | Exam Week                      | —                                  | —                                                        | —                                                            | —                                                              |
-| 9      | Modeling & Evaluation I        | [SF Rents](#sf-rents)              | Segment listings using KMeans                            | [School Diversity](#school-diversity)                        | Segment districts by diversity                                 |
-| 10     | Modeling & Evaluation II       | [SF Rents](#sf-rents)              | Decision tree for rent flag                              | [Hotels](#hotels)                                            | Build decision tree or KNN on cancellation flag                |
-| 11     | Modeling & Evaluation III      | [Employee Attrition](#employee-attrition) | Real-world HR classification problem                     | [Monthly State Retail Sales](#monthly-state-retail-sales)    | Predict retail sales using economic indicators                 |
-| 12     | Modeling & Evaluation IV       | [Super Bowl Commercials](#super-bowl-commercials) | Many binary flags + label for NLP                        | [GPT Detectors](#gpt-detectors)                              | Text classification, model tuning                              |
-| 13     | Modeling & Evaluation V        | [Online Food Orders](#online-food-orders) | Practice tokenization, vectorization, and feedback analysis | [GPT Detectors](#gpt-detectors)                              | Evaluate model flags or derived notes                          |
-| 14     | Model Deployment               | [Amazon Reviews](#amazon-reviews)  | Load API data, prepare for modeling                      | [Global Holidays & Travel](#global-holidays-and-travel)      | Deploy holiday demand predictor                                |
-| 15     | Final Project & Wrap-Up        | Student Choice                     | Consolidation and end-of-course project                  | —                                                            | —                                                              |
-
-## 📝 Week 1 Case Studies
-
-### 📱 Streaming Churn – *Flicksly’s Battle for Binge-Watchers*
-
-**Case Study:**  
-Flicksly is a fast-growing streaming service aimed at Gen Z and young professionals. They offer original content, live sports, and curated playlists — but the competition is fierce (hi, Netflix, Hulu, Disney+). Over the past year, Flicksly noticed that a wave of users were canceling right after their free trials ended, or binge-watching a single show and ghosting.
-
-To fix this, Flicksly’s analytics team built a churn prediction model using data like how many shows users watch, time of day they watch, whether they rate or review anything, and their device types. The goal? Score every subscriber and predict who’s likely to leave. Then they send offers or recommendations (like “Finish that series?” or “1 more month on us!”) to try to keep them around.
-
-Since launching this model, Flicksly increased retention by 22% among trial users and discovered that night-time bingeing is linked to loyalty.
-
-**Q&A:**
-- **What’s the business problem?**  
-  Flicksly is losing subscribers fast and wants to predict who’s likely to cancel, so they can improve retention and stop revenue losses.
-
-- **Supervised or unsupervised?**  
-  Supervised. They have past data showing which users stayed or canceled, so they train the model on that.
-
-- **What’s the target variable?**  
-  Whether the user canceled or stayed — a binary variable (churned = 1, stayed = 0).
-
-- **What kind of analytics?**  
-  Classification — predicting which category a new user will fall into (churn or not).
-
----
-
-### 👟 Returns & Refunds – *StreetStyle’s Smart Shopping Filters*
-
-**Case Study:**  
-StreetStyle is a popular online retailer for sneakers and streetwear. Their Gen Z customers love flash drops and limited releases — but not every order sticks. Return rates for certain products are high, especially for shoes that don’t fit well or have unclear sizing. This is hurting StreetStyle’s profits and messing with their inventory planning.
-
-To solve this, StreetStyle launched a returns prediction model. It uses data like product type, size ordered, past return history, customer reviews, cart behavior (do they add 3 sizes then keep 1?), and even delivery speed. If an order looks risky, StreetStyle can show a sizing tip, recommend better-fit items, or offer store credit instead of a refund.
-
-As a result, they reduced returns by 15% and boosted customer satisfaction by helping people get it right the first time.
-
-**Q&A:**
-- **What’s the business problem?**  
-  StreetStyle wants to cut down on product returns that cost money and hurt customer trust.
-
-- **Supervised or unsupervised?**  
-  Supervised. They’ve tracked which orders were returned and use that to train the model.
-
-- **What’s the target variable?**  
-  Whether an order is returned or kept (binary: return = 1, keep = 0).
-
-- **What kind of analytics?**  
-  Classification — they’re predicting if an item will be returned.
-
----
+| Module | Topic                         | Lab Dataset                             | Why for Lab                                                  | Assignment Dataset                                          | Why for Assignment                                             |
+|--------|-------------------------------|-----------------------------------------|---------------------------------------------------------------|--------------------------------------------------------------|----------------------------------------------------------------|
+| 1      | Overview of Business Analytics | —                                       | Intro week, foundational tools                                 | Case Study                                                   | —                                                              |
+| 2      | Intro to Analytical Models     | —                                       | Basic syntax and data operations                                | Case Study                                                   | —                                                              |
+| 3      | Business Understanding         | —                                       | Business case                                                  | Case Study                                                   | —                                                              |
+| 4      | Data Understanding             | [SF Rents](#sf-rents)                   | Familiar categories, pricing, dates                             | [School Diversity](#school-diversity)                        | % diversity measures, clustering ready                         |
+| 5      | EDA – Summary Measures         | [SF Rents](#sf-rents)                   | Mixed numeric and categorical, explore rent trends              | [Hotels](#hotels)                                            | Structured records to explore summaries & distributions        |
+| 6      | Data Preparation               | [Megatelco_Duplicates](#megatelco_duplicates) | NAs, duplicates, categories to bin or encode              | —                                                            | —                                                              |
+| 7      | Data Transformation            | [Megatelco_Duplicates](#megatelco_duplicates) | Label encoding, scaling, feature engineering            | [Global Holidays & Travel](#global-holidays-and-travel)      | Time/geospatial flags, holiday creation                        |
+| 8      | Exam Week                      | —                                       | —                                                              | —                                                            | —                                                              |
+| 9      | Modeling & Evaluation I        | [SF Rents](#sf-rents)                   | Segment listings using KMeans                                   | [School Diversity](#school-diversity)                        | Segment districts by diversity                                 |
+| 10     | Modeling & Evaluation II       | [SF Rents](#sf-rents)                   | Decision tree for rent flag                                     | [Hotels](#hotels)                                            | Build decision tree or KNN on cancellation flag                |
+| 11     | Modeling & Evaluation III      | [Employee Attrition](#employee-attrition) | Real-world HR classification problem                          | [Monthly State Retail Sales](#monthly-state-retail-sales)    | Predict retail sales using economic indicators                 |
+| 12     | Modeling & Evaluation IV       | [Super Bowl Commercials](#super-bowl-commercials) | Many binary flags + label for NLP                      | [GPT Detectors](#gpt-detectors)                              | Text classification, model tuning                              |
+| 13     | Modeling & Evaluation V        | [Online Food Orders & Restaurant Reviews](#online-food-orders) | Practice tokenization, vectorization, and feedback analysis | [GPT Detectors](#gpt-detectors)                              | Evaluate model flags or derived notes                          |
+| 14     | Model Deployment               | [Reddit Post Titles](#reddit-post-titles) | Topic modeling or classification from online text           | [Global Holidays & Travel](#global-holidays-and-travel)      | Deploy holiday demand predictor                                |
+| 15     | Final Project & Wrap-Up        | Student Choice                          | Consolidation and end-of-course project                        | —                                                            | —                                                              |
 
 # Dataset Outlines
 
@@ -85,13 +35,15 @@ This table includes curated datasets for an introductory business analytics cour
 | **SF Rents** | 2022 | Rental prices in San Francisco over time. | Urban economics, housing markets | ~10–12 | `rent` | Price outliers, missing records, standardization | Outliers, geospatial prep needed | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2022/2022-07-05/readme.md) | Real Estate, Business Analytics (minor) |
 | **Monthly State Retail Sales** | 2022 | Monthly retail sales across U.S. states. | Retail trends, geographic comparisons | ~15 | `sales` | Seasonal gaps, NA values, numeric scaling | Ideal for seasonal modeling | [GitHub](https://github.com/rfordatascience/tidytuesday/tree/main/data/2022/2022-12-13) | Marketing, Operations & Supply Chain, Business Analytics (minor) |
 | **Global Holidays and Travel** | 2024 | Human mobility patterns based on holiday calendars. | Tourism analysis, mobility planning | ~12 | None (engineer mobility flag) | Missing geolocations, holiday anomalies | Geospatial + temporal complexity | [GitHub](https://github.com/rfordatascience/tidytuesday/blob/main/data/2024/2024-12-24/readme.md) | Operations & Supply Chain, Marketing |
-| **Megatelco Customer Survey** | 2023 | Demographic, usage, and churn survey data from a telecom firm. | Churn analysis, customer segmentation | ~15 | `Leave` | Categorical harmonization, inconsistent NA entries | Survey + behavioral + financial fields | *Local* | Information Systems, Business Analytics |
+| **Megatelco_Duplicates** | 2023 | Demographic, usage, and churn survey data from a telecom firm. | Churn analysis, customer segmentation | ~15 | `Leave` | Categorical harmonization, inconsistent NA entries | Survey + behavioral + financial fields | *Local* | Information Systems, Business Analytics |
 | **Amazon Reviews** | 2022 | User review sentiment data scraped from Amazon product pages. | NLP, product analytics | 4 | `sentiment` | Sparse text length, class imbalance | Free-text with target label | *Local* | Marketing, Business Analytics |
 | **AdviseInvest Historical** | 2023 | Past customers’ profiles and outcomes for an investment firm. | Investment decision behavior, churn | ~10 | `Leave` | Some missing entries | Binary classification | *Local* | Finance, QAMO |
 | **AdviseInvest New Customers** | 2023 | Unlabeled new investor data for prediction. | Profile scoring, churn modeling | ~9 | Unknown | Missing satisfaction, no outcomes | Supervised learning setup | *Local* | Finance, Business Analytics |
 | **Superstore Retail Orders** | 2017 | Order and sales data across regions and products. | Retail operations, profit analysis | ~18 | `Profit` or `Sales` | Date parsing, inconsistent regions | Joinable categories & dates | *Local* | Business Analytics, Marketing |
+| **Online Food Orders** | 2023 | Survey data on preferences and behaviors of online food delivery users. | Food delivery trends, customer profiling | 13 | — | Ambiguous target, potential parsing cleanup | Contains geolocation, free-text feedback | *Local* | Marketing, Business Analytics |
+| **Restaurant Reviews** | 2020s | Free-text customer reviews with binary sentiment labels. | Text classification, sentiment analysis | 2 | `Liked` | Sparse entries, binary imbalance possible | NLP-ready structure | *Local* | Marketing, Business Analytics |
+| **Employee Attrition** | 2022 | HR dataset including job satisfaction, income, and attrition indicators. | Workforce analytics, HR decision-making | 29 | `Attrition` | Categorical normalization, survey bias | Balanced classes, rich HR fields | *Local* | Human Resource Management, Business Analytics |
 
----
 
 # Dataset Descriptions and Links
 
@@ -139,31 +91,6 @@ hotels = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytues
 | reservation_status          | character | Final reservation status |
 | reservation_status_date     | double    | Date of final status |
 
----
-
-## Student Loan Payments  
-<a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2019/2019-03-12/readme.md" target="_blank">GitHub Source</a>
-
-**Description:** Financial data covering loan performance and repayment trends by U.S. government agencies. Excellent for policy analysis and finance modeling exercises.
-
-### Data Dictionary
-
-#### `loans.csv`
-
-loans = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2019/2019-11-26/loans.csv")
-
-| Variable           | Class     | Description |
-|:------------------|:----------|:------------|
-| agency_name        | character | Name of loan agency |
-| year               | integer   | Two-digit year |
-| quarter            | integer   | Quarter (1–4) |
-| starting           | double    | Total value at start of quarter |
-| added              | double    | Amount added during quarter |
-| total              | double    | Total dollars repaid |
-| consolidation      | double    | Value of consolidated loans |
-| rehabilitation     | double    | Value of rehabilitated loans |
-| voluntary_payments | double    | Total voluntary borrower payments |
-| wage_garnishments  | double    | Total wage garnishment payments |
 
 ---
 
@@ -375,129 +302,6 @@ diversity_school = pd.read_csv('https://raw.githubusercontent.com/rfordatascienc
 
 ---
 
-## Wealth and Income Over Time  
-<a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2021/2021-02-09/readme.md" target="_blank">GitHub Source</a>
-
-**Description:** Multi-decade indicators of economic inequality broken down by race and income bracket. Supports longitudinal and cohort analyses of wealth distribution.
-
-### Data Dictionary
-
-#### `lifetime_earn.csv`
-
-lifetime_earn = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/
-
-| Variable      | Class     | Description |
-|:--------------|:----------|:------------|
-| gender        | character | Gender group |
-| race          | character | Racial group |
-| lifetime_earn | double    | Average lifetime earnings |
-
-#### `student_debt.csv`
-
-student_debt = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/student_debt.csv')
-
-| Variable      | Class     | Description |
-|:--------------|:----------|:------------|
-| year          | double    | Year |
-| race          | character | Racial group |
-| loan_debt     | double    | Average loan debt |
-| loan_debt_pct | double    | Percent with debt |
-
-#### `retirement.csv`
-
-retirement = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/retirement.csv')
-
-| Variable   | Class     | Description |
-|:-----------|:----------|:------------|
-| year       | double    | Year |
-| race       | character | Racial group |
-| retirement | double    | Avg. retirement savings |
-
-#### `home_owner.csv`
-
-home_owner = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/home_owner.csv')
-
-| Variable       | Class     | Description |
-|:---------------|:----------|:------------|
-| year           | double    | Year |
-| race           | character | Racial group |
-| home_owner_pct | double    | % homeowners |
-
-#### `race_wealth.csv`
-
-race_wealth = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/race_wealth.csv')
-
-| Variable      | Class     | Description |
-|:--------------|:----------|:------------|
-| type          | character | "Mean" or "Median" |
-| year          | double    | Year |
-| race          | character | Racial group |
-| wealth_family | double    | Avg. wealth |
-
-#### `income_time.csv`
-
-income_time = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_time.csv')
-
-| Variable      | Class     | Description |
-|:--------------|:----------|:------------|
-| year          | integer   | Year |
-| percentile    | character | Income percentile |
-| income_family | double    | Income value |
-
-#### `income_limits.csv`
-
-income_limits = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_limits.csv')
-
-| Variable        | Class     | Description |
-|:----------------|:----------|:------------|
-| year            | double    | Year |
-| race            | character | Racial group |
-| dollar_type     | character | Year-adjusted dollars |
-| number          | double    | Household count |
-| income_quintile | character | Income quintile |
-| income_dollars  | double    | Income value |
-
-#### `income_aggregate.csv`
-
-income_aggregate = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_aggregate.csv')
-
-| Variable        | Class     | Description |
-|:----------------|:----------|:------------|
-| year            | double    | Year |
-| race            | character | Racial group |
-| number          | double    | Households |
-| income_quintile | character | Quintile |
-| income_share    | double    | % of total income |
-
-#### `income_distribution.csv`
-
-income_distribution = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_distribution.csv')
-
-| Variable            | Class     | Description |
-|:--------------------|:----------|:------------|
-| year                | integer   | Year |
-| race                | character | Racial group |
-| number              | double    | Households |
-| income_median       | integer   | Median income |
-| income_med_moe      | integer   | Margin of error for median |
-| income_mean         | integer   | Mean income |
-| income_mean_moe     | integer   | Margin of error for mean |
-| income_bracket      | character | Income range |
-| income_distribution | double    | % in bracket |
-
-#### `income_mean.csv`
-
-income_mean = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2021/2021-02-09/income_mean.csv')
-
-| Variable        | Class     | Description |
-|:----------------|:----------|:------------|
-| year            | double    | Year |
-| race            | character | Racial group |
-| dollar_type     | character | Dollar standard |
-| income_quintile | character | Quintile group |
-| income_dollars  | double    | Average income |
-
-
 
 ## SF Rents  
 <a href="https://github.com/rfordatascience/tidytuesday/blob/main/data/2022/2022-07-05/readme.md#sf-rents" target="_blank">GitHub Source</a>
@@ -529,74 +333,6 @@ rent = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesda
 | title        | character | Listing title |
 | descr        | character | Listing description |
 | details      | character | Additional listing details |
-
-#### `sf_permits.csv`
-
-permits = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-07-05/sf_permits.csv')
-
-| Variable                               | Class     | Description |
-|:--------------------------------------|:----------|:------------|
-| permit_number                          | character | Permit ID |
-| permit_type                            | double    | Numeric type code |
-| permit_type_definition                 | character | Definition of permit type |
-| permit_creation_date                   | double    | Date permit was created |
-| block                                  | character | Block ID |
-| lot                                    | character | Lot ID |
-| street_number                          | double    | Street number |
-| street_number_suffix                   | character | Suffix for street number |
-| street_name                            | character | Street name |
-| street_suffix                          | character | Street suffix (e.g., Ave, St) |
-| unit                                   | double    | Unit number |
-| unit_suffix                            | character | Unit suffix |
-| description                            | character | Permit description |
-| status                                 | character | Current status of the permit |
-| status_date                            | double    | Date of current status |
-| filed_date                             | double    | Date filed |
-| issued_date                            | double    | Date issued |
-| completed_date                         | double    | Date construction completed |
-| first_construction_document_date       | double    | First construction doc date |
-| structural_notification                | character | Structural notification status |
-| number_of_existing_stories             | double    | Existing number of stories |
-| number_of_proposed_stories             | double    | Proposed number of stories |
-| voluntary_soft_story_retrofit          | character | Soft-story retrofit status |
-| fire_only_permit                       | character | Fire permit status |
-| permit_expiration_date                 | double    | Expiration date |
-| estimated_cost                         | double    | Estimated project cost |
-| revised_cost                           | double    | Revised project cost |
-| existing_use                           | character | Current land use |
-| existing_units                         | double    | Number of existing units |
-| proposed_use                           | character | Proposed land use |
-| proposed_units                         | double    | Number of proposed units |
-| plansets                               | double    | Number of plan sets |
-| tidf_compliance                        | logical   | TIDF compliance |
-| existing_construction_type             | double    | Code for current construction type |
-| existing_construction_type_description | character | Description of current construction |
-| proposed_construction_type             | double    | Code for proposed construction type |
-| proposed_construction_type_description | character | Description of proposed construction |
-| site_permit                            | character | Site permit code |
-| supervisor_district                    | double    | Supervisor district |
-| neighborhoods_analysis_boundaries      | character | Neighborhood category |
-| zipcode                                | double    | ZIP code |
-| location                               | character | Geolocation string |
-| record_id                              | double    | Unique record ID |
-| date                                   | double    | Associated date |
-
-#### `new_construction.csv`
-
-new_construction = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/main/data/2022/2022-07-05/new_construction.csv')
-
-| Variable             | Class     | Description |
-|:---------------------|:----------|:------------|
-| cartodb_id           | integer   | Unique ID |
-| the_geom             | logical   | Geometry type |
-| the_geom_webmercator | logical   | Geometry in Web Mercator projection |
-| county               | character | County name |
-| year                 | integer   | Year of record |
-| totalproduction      | integer   | Total housing units produced |
-| sfproduction         | integer   | Single-family units produced |
-| mfproduction         | integer   | Multi-family units produced |
-| mhproduction         | integer   | Mobile homes produced |
-| source               | character | Source of data |
 
 ---
 
